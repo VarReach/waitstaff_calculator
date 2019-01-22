@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #dedede;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: #383838;
+    font-size: 24pt;
+    font-weight: 300;
+    margin: 10px 50px;
+}
+
+.bottom-border {
+    display: inline-block;
+    border-bottom: 1px solid #c9c9c9;
+    margin-bottom: 15px;
+}
+
+/* Main Body Sections */
+
+.section-holder {
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    margin-bottom: 28px;
+    width: 100%;
+}
+
+.section-header-blue, .section-header-orange {
+    height: 40px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    display: grid;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.section-header-blue {
+    background-color: #8abde4;
+}
+
+.section-header-orange {
+    background-color: #e6ae66;
+}
+
+.header-text {
+    color: white;
+    font-size: 9pt;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.section-body {
+    background-color: #f6f6f6;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 15px;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #666666;
+}
+
+/* buttons */
+
+button {
+    all: unset;
+    display: inline-block;
+    position: absolute;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 43px;
+    width: 110px;
+
+    font-size: 11pt;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.primary-button {
+    left: 0;
+    background-color: #8abde4;
+    border-bottom: 3px solid #517cc2;
+
+    font-weight: 700;
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: #9ccdf2;
+}
+
+.primary-button:active {
+    box-sizing: content-box;
+    background-color: #7599c9;
+    border-bottom: none;
+    box-shadow: inset 0 2px 3px #4a74ba;
+}
+
+.secondary-button {
+    background-color: white;
+    border: 1px solid #dedede;
+    border-bottom: 3px solid #dedede;
+
+    color: #dedede;
+}
+
+.secondary-button:hover {
+    color: #bdbdbd;
+}
+
+.secondary-button:active {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #dedede;
+    color: #bdbdbd;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.10);
+}
+
+.tertiary-button {
+    background-color: #f6f6f6;
+    border: 1px solid #bdbdbd;
+    border-bottom: 3px solid #bdbdbd;
+
+    color: #bdbdbd;
+}
+
+.tertiary-button:hover {
+    color: #999999;
+}
+
+.tertiary-button:active {
+    background-color: #d6d6d6;
+    border-bottom: 1px solid #bdbdbd;
+    color: #999999;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.10);
+}
+
+/* Input Forms */
+
+form>div {
+    margin-bottom: 18px;
+}
+
+.input-group {
+    display: inline-block;
+    position: relative;
+}
+
+input {
+    border: 1px solid #bdbdbd;
+}
+
+input {
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+    color: #666666;
+    font-size: 11pt;
+    height: 30px;
+    padding: 0 10px 0 45px;
+}
+
+input::placeholder {
+    color: #bdbdbd;
+}
+
+.input-i {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    display: grid;
+    
+    font-style: normal;
+    text-align: center;
+    align-items: center;
+
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+    color: #bdbdbd;
+    background-color: #f0f0f0;
+    border-right: 1px solid #bdbdbd;
+
+    width: 36px;
+    height: 28px;
+}
+
+.entry-label-right {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    font-size: 11pt;
+    font-weight: 600;
+    color: #666666;
+    margin-right: 15px;
+}
+
+/* Input specifics */
+
+.base-meal-price-entry {
+    width: 160px;
+}
+
+.tax-rate-entry, .tip-percentage-entry {
+    width: 90px;
+}
+
+/* Meal Details Section */
+
+.meal-details.section-body {
+    height: 316px;
+}
+
+.customer-charges.section-body, .earnings-info.section-body {
+    height: 124px;
+}
+
+#meal-details-form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#meal-details-form .button-group {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    width: 234px;
+}
+
+/* Results Sections */
+
+.charges-result, .charges-label, .earnings-label, .earnings-result {
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.charges-result, .charges-label {
+    width: 50%;
+}
+
+.earnings-label {
+    width: 60%;
+}
+
+.earnings-result {
+    width: 40%;
+}
+
+.charges-label, .earnings-label {
+    color: #666666;
+    font-size: 11pt;
+    padding-right: 5px;
+}
+
+.charges-label {
+    text-align: right;
+}
+
+.charges-result, .earnings-result {
+    padding-left: 5px;
+    color: #517cc2;
+}
+
+.earnings-result {
+    text-align: right;
+}
+
+/* Reset Button */
+
+.reset-button-holder {
+    position: relative;
+    text-align: right;
+    height: 50px;
+}
+
+.reset-button {
+    right: 20px;
+}

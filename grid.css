@@ -1,0 +1,38 @@
+.row {
+    max-width: 688px;
+    margin: 0 auto;
+  }
+  
+  .row::after {
+    clear: both;
+    display: table;
+    content: '';
+  }
+  
+  [class*="col-"] {
+      float: left;
+      padding-left: 14px;
+      padding-right: 14px;
+  }
+  
+  /* mobile default */
+  
+  .col-left, .col-right, .col-full {
+    width: 100%;
+  }
+  
+  /* desktop default */
+  
+  @media only screen and (min-width: 688px) {
+    .col-right {
+      width: 298px;
+    }
+  
+    .col-left {
+      width: 362px;
+    }
+  
+    .col-full {
+      width: 100%;
+    }
+  }

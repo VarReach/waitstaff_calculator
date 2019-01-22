@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Waitstaff Calculator</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <header role="banner">
+        <div class="bottom-border">
+            <h1>Waitstaff Calculator</h1>
+        </div>
+    </header>
+    <main role="main" class="row">
+        <section class="col-left">
+            <div class="section-holder">
+                <div class="meal-details section-header-blue">
+                    <span class="header-text">Enter the meal details</span>
+                </div>
+                <div class="meal-details section-body">
+                    <form id="meal-details-form">
+                        <div>
+                            <label for="base-meal-price-entry" class="entry-label-right">Base Meal Price:</label>
+                            <div class="input-group">
+                                <input type="text" name="base-meal-price-entry" class="base-meal-price-entry js-base-meal-price-entry" autocomplete="off" placeholder="0.00" onkeypress="return isNumberKey(event)" pattern="^(\d+)?([.]?\d+)?$" required>
+                                <i class="input-i">$</i>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="tax-rate-entry" class="entry-label-right">Tax Rate:</label>
+                            <div class="input-group">
+                                <input type="text" name="tax-rate-entry" class="tax-rate-entry js-tax-rate-entry" autocomplete="off" placeholder="0.00" onkeypress="return isNumberKey(event)" pattern="^(\d+)?([.]?\d+)?$" required>
+                                <i class="input-i">%</i>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="tip-percentage-entry" class="entry-label-right">Tip Percentage:</label>
+                            <div class="input-group">
+                                <input type="text" name="tip-percentage-entry" class="tip-percentage-entry js-tip-percentage-entry" autocomplete="off" placeholder="0.00" onkeypress="return isNumberKey(event)" pattern="^(\d+)?([.]?\d+)?$" required>
+                                <i class="input-i">%</i>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button type="submit" class="primary-button">submit</button>
+                            <button type="reset" class="secondary-button">cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="col-right">
+            <div class="section-holder">
+                <div class="customer-charges section-header-orange">
+                    <span class="header-text">Customer Charges</span>
+                </div>
+                <div class="customer-charges section-body">
+                    <span class="charges-label">Subtotal</span><span class="charges-result js-subtotal-result">$ 0.00</span>
+                    <span class="charges-label">Tip</span><span class="charges-result js-tip-result">$ 0.00</span>
+                    <hr class="separator">
+                    <span class="charges-label">Total</span><span class="charges-result js-total-result">$ 0.00</span>
+                </div>
+            </div>
+
+            <div class="section-holder">
+                <div class="customer-charges section-header-orange">
+                    <span class="header-text">My Earnings Info</span>
+                </div>
+                <div class="customer-charges section-body">
+                    <span class="earnings-label">Tip Total:</span><span class="earnings-result js-tip-total-result">$ 0.00</span>
+                    <span class="earnings-label">Meal Count:</span><span class="earnings-result js-meal-count-result">0</span>
+                    <hr class="separator">
+                    <span class="earnings-label">Avg. Tip Per Meal:</span><span class="earnings-result js-avg-tip-per-meal-result">$ 0.00</span>
+                </div>
+            </div>
+        </section>
+        <div class="reset-button-holder col-full">
+            <button class="reset-button js-reset-button tertiary-button">Reset</button>
+        </div>
+    </main>
+    <script type="text/javascript" src="inputs.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
